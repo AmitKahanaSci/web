@@ -603,8 +603,98 @@ border-top: none;
 
 /* Existing styles... */
 
-/* Adjust layout for smaller screens */
-@media (max-width: 600px) {
+/* Prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Adjust layout for larger screens */
+  @media (min-width: 601px) {
+    body {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .sidebar {
+      width: 170px; /* Fixed width for the sidebar */
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      background-color: #182633;
+      color: #ffffff;
+    }
+  
+    .sidebar a {
+      font-size: 1.2rem;
+      padding: 15px 0;
+      color: #bbb;
+      text-align: left;
+    }
+  
+    .main-container {
+      margin-left: 170px; /* Adjust margin for the sidebar */
+      width: calc(100% - 170px);
+      padding-top: 30px;
+    }
+  
+    .title-card {
+      padding: 200px 0; /* Adjust padding for the title card */
+      text-align: center;
+    }
+  
+    .title-card h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0;
+    }
+  
+    .subtitle, .subtitle2 {
+      font-size: 1.2rem;
+      text-align: center;
+    }
+  
+    .content {
+      width: calc(100% - 230px); /* Adjust width for the content */
+      max-width: 1000px;
+      margin: auto;
+      padding: 30px;
+    }
+  
+    .about-content {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .about-image {
+      width: auto;
+      max-width: 350px;
+      margin-right: 40px;
+    }
+  
+    .about-text {
+      flex: 1;
+      text-align: justify;
+    }
+  
+    .publication-content {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  
+    .publication-content img {
+      width: 180px;
+      margin-right: 15px;
+    }
+  }
+  
+  /* Adjust layout for smaller screens */
+  @media (max-width: 600px) {
     body {
       flex-direction: column;
       align-items: center;
@@ -638,7 +728,6 @@ border-top: none;
       margin-left: 0;
       width: 100%;
       padding-top: 60px; /* Add padding to avoid overlap with fixed sidebar */
-      padding-bottom: 0px;
     }
   
     .title-card {
@@ -648,14 +737,13 @@ border-top: none;
   
     .title-card h1 {
       font-size: 2.5rem;
-      margin-bottom: 0px; /* Reduce margin below the title */
+      margin-bottom: 10px; /* Reduce margin below the title */
     }
   
     .subtitle, .subtitle2 {
       margin-top: 5px; /* Reduce margin above subtitles */
       margin-bottom: 5px; /* Reduce margin below subtitles */
       text-align: center; /* Center align subtitles */
-      font-size: 1.1rem;
     }
   
     .content {
@@ -692,24 +780,28 @@ border-top: none;
     }
   }
   
-  /* Reduce space below the header */
-  .title-card {
-    padding-top: 10px; /* Reduce padding at the top */
-    padding-bottom: 10px; /* Reduce padding at the bottom */
-    text-align: center; /* Center align the title card */
-    margin: 0 auto; /* Center the title card */
-    padding-left: 0px;
-    /* padding-right: 0px; */
-  }
-  
-  /* Ensure sidebar stretches the full width */
-  .sidebar {
-    width: 100vw; /* Ensure the sidebar stretches the full width */
-    justify-content: space-between; /* Ensure items are spread out */
-  }
-  
   /* Ensure no elements cause overflow */
   * {
     max-width: 100%;
     box-sizing: border-box;
   }
+  
+  /* Ensure main container does not cause overflow */
+  .main-container {
+    overflow-y: auto; /* Allow vertical scrolling within the main container */
+    height: calc(100vh - 60px); /* Adjust height to fit within the viewport */
+  }
+  
+  /* Fix the weird space issue */
+  body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
