@@ -610,18 +610,22 @@ border-top: none;
     body {
       flex-direction: column;
       align-items: center;
+      overflow-x: hidden; /* Prevent horizontal scrolling */
     }
   
     .sidebar {
-      width: 100%;
+      width: 100vw; /* Ensure the sidebar stretches the full width */
       height: auto;
-      position: relative;
+      position: fixed; /* Fix the sidebar at the top */
+      top: 0;
+      left: 0;
       padding: 10px;
       display: flex;
       justify-content: space-around;
       flex-wrap: nowrap;
       flex-direction: row; /* Align items horizontally */
-      order: -1; /* Move sidebar to the top */
+      background-color: #182633; /* Ensure background color covers full width */
+      z-index: 1000; /* Ensure sidebar is on top */
     }
   
     .sidebar a {
@@ -629,26 +633,31 @@ border-top: none;
       padding: 10px 0;
       flex: 1 1 auto;
       text-align: center;
+      color: #bbb; /* Ensure text color is visible */
     }
   
     .main-container {
       margin-left: 0;
       width: 100%;
+      padding-top: 60px; /* Add padding to avoid overlap with fixed sidebar */
+      padding-bottom: 0px;
     }
   
     .title-card {
-      padding: 10px 0; /* Less padding for the title card */
+      padding: 10px 20px; /* Adjust padding for the title card */
       text-align: center;
     }
   
     .title-card h1 {
       font-size: 2.5rem;
-      margin-bottom: 10px; /* Reduce margin below the title */
+      margin-bottom: 0px; /* Reduce margin below the title */
     }
   
     .subtitle, .subtitle2 {
       margin-top: 5px; /* Reduce margin above subtitles */
       margin-bottom: 5px; /* Reduce margin below subtitles */
+      text-align: center; /* Center align subtitles */
+      font-size: 1.1rem;
     }
   
     .content {
@@ -683,5 +692,25 @@ border-top: none;
       width: 100%;
       max-width: 200px;
     }
+  }
+  
+  /* Reduce space below the header */
+  .title-card {
+    padding-top: 10px; /* Reduce padding at the top */
+    padding-bottom: 10px; /* Reduce padding at the bottom */
+    text-align: center; /* Center align the title card */
+    margin: 0 auto; /* Center the title card */
+  }
+  
+  /* Ensure sidebar stretches the full width */
+  .sidebar {
+    width: 100vw; /* Ensure the sidebar stretches the full width */
+    justify-content: space-between; /* Ensure items are spread out */
+  }
+  
+  /* Ensure no elements cause overflow */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
   }
   
