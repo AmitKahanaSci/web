@@ -698,7 +698,7 @@ border-top: none;
     padding-bottom: 10px; /* Reduce padding at the bottom */
     text-align: center; /* Center align the title card */
     margin: 0 auto; /* Center the title card */
-    padding-left: 5px;
+    padding-left: 0px;
     /* padding-right: 0px; */
   }
   
