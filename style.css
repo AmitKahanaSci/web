@@ -601,8 +601,6 @@ border-top: none;
 
 
 
-
- 
 /* Existing styles... */
 
 /* Adjust layout for smaller screens */
@@ -700,6 +698,8 @@ border-top: none;
     padding-bottom: 10px; /* Reduce padding at the bottom */
     text-align: center; /* Center align the title card */
     margin: 0 auto; /* Center the title card */
+    padding-left: 5px;
+    /* padding-right: 0px; */
   }
   
   /* Ensure sidebar stretches the full width */
@@ -713,4 +713,3 @@ border-top: none;
     max-width: 100%;
     box-sizing: border-box;
   }
-  
