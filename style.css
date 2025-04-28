@@ -685,10 +685,3 @@ border-top: none;
     }
   }
   
-  /* Reduce space below the header */
-  .title-card {
-    padding-top: 20px; /* Reduce padding at the top */
-    padding-bottom: 20px; /* Reduce padding at the bottom */
-  }
-  
-  
