@@ -733,6 +733,7 @@ html, body {
     .title-card {
       padding: 10px 20px; /* Adjust padding for the title card */
       text-align: center;
+      padding-left: 0px;
     }
   
     .title-card h1 {
