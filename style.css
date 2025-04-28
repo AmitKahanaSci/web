@@ -625,7 +625,7 @@ border-top: none;
     }
   
     .sidebar a {
-      font-size: 1rem;
+      font-size: 0.9rem; /* Slightly larger font size for menu options */
       padding: 10px 0;
       flex: 1 1 auto;
       text-align: center;
@@ -637,12 +637,18 @@ border-top: none;
     }
   
     .title-card {
-      padding: 20px;
+      padding: 10px 0; /* Less padding for the title card */
       text-align: center;
     }
   
     .title-card h1 {
       font-size: 2.5rem;
+      margin-bottom: 10px; /* Reduce margin below the title */
+    }
+  
+    .subtitle, .subtitle2 {
+      margin-top: 5px; /* Reduce margin above subtitles */
+      margin-bottom: 5px; /* Reduce margin below subtitles */
     }
   
     .content {
@@ -658,6 +664,9 @@ border-top: none;
     .about-image {
       width: 100%;
       max-width: 300px;
+      margin: auto; /* Center the image */
+      display: flex;
+      justify-content: center;
     }
   
     .about-text {
@@ -675,3 +684,11 @@ border-top: none;
       max-width: 200px;
     }
   }
+  
+  /* Reduce space below the header */
+  .title-card {
+    padding-top: 20px; /* Reduce padding at the top */
+    padding-bottom: 20px; /* Reduce padding at the bottom */
+  }
+  
+  
