@@ -97,7 +97,7 @@ section {
 }
     
 /* Adjust spacing for smaller screens */
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .main-container {
         margin-left: 150px; /* Adjust margin for smaller screens */
     }
@@ -191,7 +191,7 @@ h1 {
 }
 
 /* Adjust layout for smaller screens */
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .about-content {
         flex-direction: column; /* Stack image above text */
         align-items: center;
@@ -320,7 +320,7 @@ h1 {
 }
 
 /* Adjust layout for smaller screens */
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
     .publication-content {
         flex-direction: column; /* Stack image above text */
         align-items: center; /* Center content */
