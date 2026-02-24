@@ -17,6 +17,17 @@
             var content = document.getElementById(id);
             content.style.display = content.style.display === 'none' ? 'flex' : 'none';
         }
+        function toggleMenu() {
+            var nav = document.getElementById('sidebar-nav');
+            var btn = document.getElementById('hamburger-btn');
+            nav.classList.toggle('open');
+            btn.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            document.getElementById('sidebar-nav').classList.remove('open');
+            document.getElementById('hamburger-btn').classList.remove('open');
+        }
     </script>
 </head>
 <body>
@@ -33,23 +44,26 @@
             </p>
         </header>
 
-        <div class="sidebar">
+        <button class="hamburger" onclick="toggleMenu()" id="hamburger-btn">&#9776;</button>
+
+        <div class="sidebar" id="sidebar-nav">
+            <a href="#about" onclick="closeMenu()">About Me</a>
+            <a href="#research" onclick="closeMenu()">Research</a>
+            <a href="#publications" onclick="closeMenu()">Publications</a>
+            <a href="#recognition" onclick="closeMenu()">Recognition</a>
+            <a href="#associations" onclick="closeMenu()">Associations</a>
+            <a href="#contact" onclick="closeMenu()">Contact</a>
+        </div>
+
+        <!-- <div class="sidebar">
             <!-- <h2>Dr Amit<br>Kahana</h2> -->
-            <a href="#about">About Me</a>
+            <!-- <a href="#about">About Me</a>
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#recognition">Recognition</a>
             <a href="#associations">Associations</a>
             <a href="#contact">Contact</a>
-            <!-- <div class="sidebar-icons">
-                <a href="mailto:a.kahana.1@research.gla.ac.uk" target="_blank"><img src="./images/envelope-solid.svg"></a>
-                <a href="https://scholar.google.co.il/citations?user=S1-Cuh0AAAAJ&hl=iw" target="_blank"><img src="./images/google-scholar-brands-solid.svg"></a>
-                <a href="https://www.linkedin.com/in/amit-kahana-8b9281269/" target="_blank"><img src="./images/linkedin-in-brands-solid.svg"></a>
-                <a href="https://x.com/AmitKahana" target="_blank"><img src="./images/twitter-brands-solid.svg"></a>
-                <a href="https://www.researchgate.net/profile/Amit-Kahana?ev=hdr_xprf" target="_blank"><img src="./images/researchgate-brands-solid.svg"></a>
-                <a href="https://bsky.app/profile/amitkahana.bsky.social" target="_blank"><img src="./images/bluesky-brands-solid.svg"></a>
-            </div> -->
-        </div>
+        </div> --> -->
 
         <div class="content">
             <section id="about" class="about">
@@ -566,6 +580,7 @@
     </div>
 </body>
 </html>
+
 
 
 
