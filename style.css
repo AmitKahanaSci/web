@@ -861,6 +861,13 @@ html, body {
     color: #666;
 }
 
+.short { display: none; }
+.full  { display: inline; }
+
+@media (max-width: 1100px) {
+    .short { display: inline; }
+    .full  { display: none; }
+}
 
 
 
