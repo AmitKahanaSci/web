@@ -84,8 +84,7 @@ body {
 
 /* Space between title card and main sections */
 section {
-    padding-top: 120px;
-    padding-bottom: 40px;
+    padding-top: 80px;
 }
 
 .content {
@@ -133,8 +132,6 @@ h1 {
     border-bottom: 2px solid #ddd;
     padding-bottom: 10px;
     color: #182633;
-    font-weight: 600;
-    letter-spacing: -0.5px;
     /* font-family: "Aptos"; */
 }
 
@@ -280,7 +277,6 @@ h1 {
 
 .publication:hover {
     background-color: #f9f9f9;
-    transform: translateY(-2px);
 }
 
 .pub-header {
@@ -316,16 +312,9 @@ h1 {
     line-height: 1.4;
 }
 
-/* .pub-info em {
+.pub-info em {
     font-size: 0.9rem;
     color: #666;
-} */
-.pub-info em {
-    font-style: normal;
-    text-transform: uppercase;
-    font-size: 0.75rem;
-    letter-spacing: 1px;
-    color: #888;
 }
 
 .publication-content {
@@ -428,13 +417,10 @@ h1 {
 }
 
 .contact-icons a img {
-    width: 35px;
+    width: 50px;
     height: auto;
     transition: transform 0.3s;
     margin-bottom: 10px;
-}
-.contact-icons a img:hover {
-    transform: scale(1.1);
 }
 
 .associations {
@@ -686,21 +672,11 @@ html, body {
       padding: 100px 0; /* Adjust padding for the title card */
       text-align: center;
       padding-bottom: 50px;
-      background-color: #f8f9fb;
     }
   
     .title-card h1 {
       font-size: 3.5rem;
       margin-bottom: 0;
-    }
-
-    .title-card h1::after {
-        content: "";
-        display: block;
-        width: 80px;
-        height: 3px;
-        background: #e98441;
-        margin: 20px auto;
     }
   
     .subtitle, .subtitle2 {
@@ -880,6 +856,4 @@ html, body {
     font-size: 0.9rem;
     color: #666;
 }
-
-
 
