@@ -17,17 +17,6 @@
             var content = document.getElementById(id);
             content.style.display = content.style.display === 'none' ? 'flex' : 'none';
         }
-        function toggleMenu() {
-            var nav = document.getElementById('sidebar-nav');
-            var btn = document.getElementById('hamburger-btn');
-            nav.classList.toggle('open');
-            btn.classList.toggle('open');
-        }
-
-        function closeMenu() {
-            document.getElementById('sidebar-nav').classList.remove('open');
-            document.getElementById('hamburger-btn').classList.remove('open');
-        }
     </script>
 </head>
 <body>
@@ -44,26 +33,24 @@
             </p>
         </header>
 
-        <button class="hamburger" onclick="toggleMenu()" id="hamburger-btn">&#9776;</button>
-
-        <div class="sidebar" id="sidebar-nav">
-            <a href="#about" onclick="closeMenu()">About Me</a>
-            <a href="#research" onclick="closeMenu()">Research</a>
-            <a href="#publications" onclick="closeMenu()">Publications</a>
-            <a href="#recognition" onclick="closeMenu()">Recognition</a>
-            <a href="#associations" onclick="closeMenu()">Associations</a>
-            <a href="#contact" onclick="closeMenu()">Contact</a>
+        <div class="sidebar">
+            <a href="#about"><span class="full">About Me</span><span class="short">About</span></a>
+            <a href="#research"><span class="full">Research</span><span class="short">Research</span></a>
+            <a href="#publications"><span class="full">Publications</span><span class="short">Pubs.</span></a>
+            <a href="#recognition"><span class="full">Recognition</span><span class="short">Awards</span></a>
+            <a href="#associations"><span class="full">Associations</span><span class="short">Assoc.</span></a>
+            <a href="#contact"><span class="full">Contact</span><span class="short">Contact</span></a>
         </div>
 
         <!-- <div class="sidebar">
-            <!-- <h2>Dr Amit<br>Kahana</h2> -->
+            <!-- <h2>Amit<br>Kahana</h2> -->
             <!-- <a href="#about">About Me</a>
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#recognition">Recognition</a>
             <a href="#associations">Associations</a>
             <a href="#contact">Contact</a>
-        </div> --> -->
+        </div> -->
 
         <div class="content">
             <section id="about" class="about">
@@ -580,6 +567,7 @@
     </div>
 </body>
 </html>
+
 
 
 
