@@ -179,7 +179,6 @@ h1 {
 .about-image {
     flex-shrink: 0; /* Prevent image from shrinking */
     max-width: 350px; /* Limit max width */
-    margin-right: -10px;
 }
 
 /* Ensure image resizes properly */
@@ -869,6 +868,7 @@ html, body {
     .short { display: inline; }
     .full  { display: none; }
 }
+
 
 
 
