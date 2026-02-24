@@ -417,10 +417,14 @@ h1 {
 }
 
 .contact-icons a img {
-    width: 50px;
+    width: 35px;
     height: auto;
     transition: transform 0.3s;
     margin-bottom: 10px;
+}
+
+.contact-icons a img:hover {
+    transform: scale(1.1);
 }
 
 .associations {
@@ -856,4 +860,5 @@ html, body {
     font-size: 0.9rem;
     color: #666;
 }
+
 
