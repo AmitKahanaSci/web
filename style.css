@@ -808,4 +808,28 @@ html, body {
     display: flex;
     flex-direction: column;
   }
-  
+
+
+.recognition-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 10px;
+}
+
+.recognition-item {
+    border-left: 3px solid #e98441;
+    padding-left: 14px;
+}
+
+.recognition-item strong {
+    display: block;
+    font-size: 1rem;
+    color: #182633;
+}
+
+.recognition-item span {
+    font-size: 0.9rem;
+    color: #666;
+}
+
