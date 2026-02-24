@@ -257,9 +257,10 @@ h1 {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    border: 2px solid #ddd;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
     padding: 15px;
-    margin: 20px 0;
+    margin: 30px 0;
     border-radius: 10px;
     background-color: #fff;
     cursor: pointer;
@@ -267,6 +268,7 @@ h1 {
     width: 100%; /* Ensure the box takes full width */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     min-width: 225px; /* Set a minimum width for the box */
+    padding: 20px;
 }
 
 .publication p {
@@ -284,14 +286,35 @@ h1 {
     flex-wrap: nowrap; /* Allow wrapping of elements if needed */
 }
 
+.pub-header::after {
+    content: "▾";
+    margin-left: auto;
+    font-size: 0.9rem;
+    color: #999;
+}
+
 .status {
-    font-weight: normal;
-    min-width: 100px;
+    font-size: 0.8rem;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: #f1f3f5;
+    color: #182633;
+    min-width: unset;
 }
 
 .pub-info {
     display: flex;
     flex-direction: column;
+}
+
+.pub-info strong {
+    font-size: 1.05rem;
+    line-height: 1.4;
+}
+
+.pub-info em {
+    font-size: 0.9rem;
+    color: #666;
 }
 
 .publication-content {
@@ -305,7 +328,8 @@ h1 {
 .publication-content img {
     width: 180px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     transition: width 0.3s;
 }
 
@@ -832,4 +856,5 @@ html, body {
     font-size: 0.9rem;
     color: #666;
 }
+
 
