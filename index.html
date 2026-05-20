@@ -101,7 +101,12 @@
                     </div>
                 </div>
             </section>
-
+            
+            <section id="wordcloud" style="padding-top: 40px; text-align: center;">
+                <img src="./images/wordcloud.png" 
+                     alt="Word cloud of research topics" 
+                     style="max-width: 600px; width: 100%; opacity: 0.85; border-radius: 12px;">
+            </section>
 
             <section id="research">
                 <h1>Research</h1>
@@ -234,7 +239,7 @@
                                 <em>arXiv</em>
                         </div>
                     </div>                
-                    <div id="pub2" class="publication-content" style="display: flex;">
+                    <div id="pub2" class="publication-content" style="display: none;">
                         <img src="./images/tol2.png" alt="Paper 2">
                         <p>Can we reconstruct evolutionary relationships without knowing the identity of the molecules involved? 
                             We developed a method combining mass spectrometry and Assembly Theory that does exactly this — inferring 
@@ -262,7 +267,7 @@
                             <em>CellRepPhysSci</em>
                         </div>
                     </div> 
-                    <div id="pub3" class="publication-content" style="display: flex;">
+                    <div id="pub3" class="publication-content" style="display: none;">
                         <img src="./images/attractor.png" alt="Paper 3">
                         <p>For life to emerge, chemistry had to become self-reproducing — but how likely is that to happen by chance? 
                             We explored this using the GARD model, a physicochemically rigorous simulation of self-replicating lipid networks. 
@@ -290,7 +295,7 @@
                             <em>NatRevChem</em>
                         </div>
                     </div>
-                    <div id="pub7" class="publication-content" style="display: flex;">
+                    <div id="pub7" class="publication-content" style="display: none;">
                         <img src="./images/natrevchem.png" alt="Paper 7">
                         <p>The conventional picture of the first protocells involves RNA or proteins enclosed in a lipid bilayer. 
                             But how did those biopolymers get there in the first place? We argue that self-reproducing lipid micelles 
@@ -337,6 +342,25 @@
                             This work provides insight into the kinetic foundations of selection in catalytic networks and the 
                             transition from chemistry to life.</p>
                         </div>
+                </div>
+                <div class="publication" onclick="togglePublication('pub_rna')">
+                    <div class="pub-header">
+                        <p class="status">2026</p>
+                        <div class="pub-info">
+                            <strong>The RNA-First Fallacy: Conflating Evolutionary Ancestry with Prebiotic Primacy</strong>
+                            <p><strong>A Kahana</strong></p>
+                            <em>Life</em>
+                        </div>
+                    </div> 
+                    <div id="pub4" class="publication-content" style="display: none;">
+                        <img src="./images/rna.png" alt="Paper 4">
+                        <p>RNA may be ancient, but was it the primal substrate of biology? Building on biochemical evidence for RNA ancestry, the case for 
+                            RNA primacy relies on highly complex molecules whose spontaneous abiotic appearance is overwhelmingly implausible. The experimental 
+                            evidence accumulated over decades has largely shown RNA's compatibility with prebiotic conditions — not its probability, necessity, 
+                            or precedence in the vast combinatorics of prebiotic chemistry. Therefore, RNA's emergence demands a preceding protobiological stage, 
+                            comprising collectively autocatalytic networks sustaining molecular evolution. Confronting the true combinatorial complexity of abiotic 
+                            chemistry is essential for an unbiased account of life's origin..</p>
+                    </div>
                 </div>
                 <div class="publication" onclick="togglePublication('pub4')">
                     <div class="pub-header">
